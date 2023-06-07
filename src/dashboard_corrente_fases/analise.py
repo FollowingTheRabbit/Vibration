@@ -3,10 +3,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def dados_input_validacao():
-    input_df = pd.read_csv('../Data/Input v2.csv', sep=';')
+    input_df = pd.read_csv('../../Data/Input v2.csv', sep=';')
     input_df.dropna(inplace=True)
     
-    validacao_df = pd.read_csv('../Data/Validação v2.csv', encoding='unicode_escape', header=[0,1], sep=';')
+    validacao_df = pd.read_csv('../../Data/Validação v2.csv', encoding='unicode_escape', header=[0,1], sep=';')
     validacao_df.columns = ['_'.join(col) for col in validacao_df.columns]
     validacao_df.columns
     validacao_df.columns = ['DATA','energia_ativa_f1 Kwh (Consumo)','energia_ativa_f2 Kwh (Consumo)','energia_ativa_f3 Kwh (Consumo)',
